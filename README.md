@@ -29,14 +29,14 @@ The central engineering challenge is to make this LLM runnable efficiently on lo
 ```mermaid
 graph TD;
     A --> B;
-    B --> C[Processed Datasets (Hugging Face Format)];
-    C --> D[scripts/train_llm.py (on Colab/TACC GPU)];
-    D --> E[Fine-tuned LoRA Adapters];
-    E --> F[scripts/optimize_model.py (Local PC)];
-    F --> G[Edge-Optimized Model (.gguf)];
-    G --> H[scripts/inference_server.py (Local PC)];
-    H --> I[ui/app.py (Streamlit UI on Local PC)];
-    I --> J[User Interaction];
+    B --> C;
+    C --> D;
+    D --> E;
+    E --> F;
+    F --> G;
+    G --> H;
+    H --> I;
+    I --> J;
 ```
 
 ### 3.1. Domain-Specific Fine-tuning (PEFT/QLoRA)
