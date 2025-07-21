@@ -28,7 +28,7 @@ The central engineering challenge is to make this LLM runnable efficiently on lo
 
 ```mermaid
 graph TD;
-    A[Raw Interview Data (.jsonl)] --> B[scripts/prepare_data.py];
+    A --> B[Raw Interview Data (.jsonl)][scripts/prepare_data.py];
     B --> C[Processed Datasets (Hugging Face Format)];
     C --> D[scripts/train_llm.py (on Colab/TACC GPU)];
     D --> E[Fine-tuned LoRA Adapters];
