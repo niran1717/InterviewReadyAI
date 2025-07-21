@@ -26,19 +26,6 @@ The central engineering challenge is to make this LLM runnable efficiently on lo
 
 ### Overall Project Flow
 
-```mermaid
-graph TD;
-    A --> B;
-    B --> C;
-    C --> D;
-    D --> E;
-    E --> F;
-    F --> G;
-    G --> H;
-    H --> I;
-    I --> J;
-```
-
 ### 3.1. Domain-Specific Fine-tuning (PEFT/QLoRA)
 
 - **Concept**: Adapt a large LLM to technical interview tasks using low-resource fine-tuning.
