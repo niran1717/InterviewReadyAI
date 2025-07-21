@@ -248,10 +248,3 @@ streamlit run ui/app.py
 - Retrieval-Augmented Generation (RAG)
 - Dockerization
 
-## 10. License
-
-This project is licensed under the MIT License.
-
-## 11. Contact
-
-For questions, collaborations, or contributions, please contact: [your-email@example.com]
