@@ -232,14 +232,18 @@ python scripts/inference_server.py
 streamlit run ui/app.py
 ```
 
-## 8. Challenges & Learnings
+## 8. Demo
+
+![InterviewReady AI Demo Screenshot](../Demo.png)
+
+## 9. Challenges & Learnings
 
 - **Resource Constraints**: Local CPUs are inadequate for fine-tuning.
 - **Hugging Face Conflicts**: `fsspec` dependency issues avoided using `pandas.read_json`.
 - **Python Syntax**: f-strings with backslashes required using `NEWLINE = "\n"` workaround.
 - **Prompt Engineering**: Structured `### Instruction:` blocks essential for model generalization.
 
-## 9. Future Enhancements
+## 10. Future Enhancements
 
 - User Response Evaluation
 - Adaptive Difficulty
