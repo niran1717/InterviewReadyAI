@@ -26,19 +26,6 @@ The central engineering challenge is to make this LLM runnable efficiently on lo
 
 ### Overall Project Flow
 
-```mermaid
-graph TD;
-    A[Raw Interview Data (.jsonl)] --> B[scripts/prepare_data.py];
-    B --> C[Processed Datasets (Hugging Face Format)];
-    C --> D[scripts/train_llm.py (on Colab/TACC GPU)];
-    D --> E[Fine-tuned LoRA Adapters];
-    E --> F[scripts/optimize_model.py (Local PC)];
-    F --> G[Edge-Optimized Model (.gguf)];
-    G --> H[scripts/inference_server.py (Local PC)];
-    H --> I[ui/app.py (Streamlit UI on Local PC)];
-    I --> J[User Interaction];
-```
-
 ### 3.1. Domain-Specific Fine-tuning (PEFT/QLoRA)
 
 - **Concept**: Adapt a large LLM to technical interview tasks using low-resource fine-tuning.
@@ -245,14 +232,18 @@ python scripts/inference_server.py
 streamlit run ui/app.py
 ```
 
-## 8. Challenges & Learnings
+## 8. Demo
+
+![InterviewReady AI Demo Screenshot](../Demo.png)
+
+## 9. Challenges & Learnings
 
 - **Resource Constraints**: Local CPUs are inadequate for fine-tuning.
 - **Hugging Face Conflicts**: `fsspec` dependency issues avoided using `pandas.read_json`.
 - **Python Syntax**: f-strings with backslashes required using `NEWLINE = "\n"` workaround.
 - **Prompt Engineering**: Structured `### Instruction:` blocks essential for model generalization.
 
-## 9. Future Enhancements
+## 10. Future Enhancements
 
 - User Response Evaluation
 - Adaptive Difficulty
@@ -261,10 +252,3 @@ streamlit run ui/app.py
 - Retrieval-Augmented Generation (RAG)
 - Dockerization
 
-## 10. License
-
-This project is licensed under the MIT License.
-
-## 11. Contact
-
-For questions, collaborations, or contributions, please contact: [your-email@example.com]
