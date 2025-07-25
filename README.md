@@ -235,6 +235,7 @@ streamlit run ui/app.py
 ## 8. Demo
 
 ![InterviewReady AI Demo Screenshot](./Demo.png)
+![InterviewReady AI Demo Interaction Screenshot](./Demo1.png)
 
 ## 9. Challenges & Learnings
 
